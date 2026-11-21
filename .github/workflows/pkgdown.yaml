@@ -46,6 +46,7 @@ jobs:
             cran::aricode
             cran::clevr
             bioc::org.Mm.eg.db
+            bioc::sparseMatrixStats
           dependencies: '"hard"'
           needs: website
 
