@@ -38,7 +38,9 @@ plot_spatial_annotation(
 
 - palette:
 
-  Optional named character vector specifying colours for cell types.
+  Colour palette. One of "viridis", "magma", "inferno", "plasma",
+  "cividis", "rocket", "mako", "turbo", or a custom character vector of
+  colours. If NULL, the default ggplot2 palette is used.
 
 - ncol:
 
@@ -46,9 +48,23 @@ plot_spatial_annotation(
 
 - theme_name:
 
-  Plot theme. One of \`"classic"\`, \`"bw"\`, \`"minimal"\`, or
-  \`"gray"\`.
+  Plot theme. One of "classic", "bw", "minimal", or "gray".
 
 ## Value
 
 A list containing plotting data and plot.
+
+## Examples
+
+``` r
+data(norm_example)
+
+p <- plot_spatial_annotation(
+  norm_list = norm_example,
+  annotation_col = "cell_type",
+  point_size = 0.5,
+  theme_name = "classic"
+)
+
+p$plot
+```

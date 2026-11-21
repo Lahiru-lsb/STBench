@@ -47,3 +47,20 @@ plot_celltype_proportion(
 ## Value
 
 A list containing summary data and plot.
+
+## Examples
+
+``` r
+data(norm_example)
+
+p <- plot_celltype_proportion(
+  norm_list = norm_example,
+  annotation_col = "cell_type",
+  method_order = NULL,
+  palette = "turbo",
+  show = "proportion",
+  theme_name = "classic"
+)
+
+p$plot
+```

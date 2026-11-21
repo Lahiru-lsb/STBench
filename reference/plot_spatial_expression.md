@@ -1,7 +1,7 @@
 # Plot spatial expression across normalisation methods
 
-Plot spatial expression of selected genes across multiple normalisation
-methods.
+Visualise spatial expression of selected genes across multiple
+normalisation methods.
 
 ## Usage
 
@@ -15,7 +15,9 @@ plot_spatial_expression(
   point_size = 0.5,
   colour_option = "magma",
   ncol_genes = 1,
-  theme_name = "classic"
+  theme_name = "classic",
+  methods = NULL,
+  scale_by = c("gene", "gene_method")
 )
 ```
 
@@ -27,26 +29,23 @@ plot_spatial_expression(
 
 - genes:
 
-  Character vector containing genes to plot.
+  Character vector of genes to plot.
 
 - assay_name:
 
-  Name of assay containing expression values. Default is
-  \`"logcounts"\`.
+  Name of the expression assay.
 
 - method_order:
 
-  Optional character vector specifying the order of normalisation
-  methods.
+  Optional ordering of selected methods.
 
 - scale_expr:
 
-  Logical. If TRUE, expression is scaled between 0 and 1 within each
-  gene across all methods.
+  Logical. Whether to scale expression.
 
 - point_size:
 
-  Point size for spatial locations.
+  Spatial point size.
 
 - colour_option:
 
@@ -54,24 +53,54 @@ plot_spatial_expression(
 
 - ncol_genes:
 
-  Number of columns used when combining gene-specific unscaled plots.
+  Number of columns for unscaled plots.
 
 - theme_name:
 
-  Plot theme. One of \`"classic"\`, \`"bw"\`, \`"minimal"\`, or
-  \`"gray"\`.
+  Plot theme.
+
+- methods:
+
+  Optional character vector of normalisation methods. If NULL, all
+  available methods are used.
+
+- scale_by:
+
+  Scaling approach: "gene" or "gene_method".
 
 ## Value
 
-A list containing the plotting data and plot.
+A list containing plotting data, individual gene plots when unscaled,
+and the combined plot.
 
 ## Details
 
-When \`scale_expr = TRUE\`, expression is scaled from 0 to 1 separately
-for each gene across all normalisation methods. The resulting maps are
-displayed using a facet grid with methods in rows and genes in columns.
+Expression can be scaled between 0 and 1 either across all selected
+methods for each gene or independently within each gene and
+normalisation method.
 
-When \`scale_expr = FALSE\`, the original expression values from the
-selected assay are retained. A separate plot is created for each gene,
-with normalisation methods shown as facets. Therefore, each gene has its
-own colour scale.
+When scale_expr = FALSE, original assay values are used. Each gene
+receives a separate plot with a common colour scale across the selected
+methods.
+
+## Examples
+
+``` r
+data(norm_example)
+
+genes <- head(rownames(norm_example[[1]]), 2)
+
+p_expr <- plot_spatial_expression(
+  norm_list = norm_example,
+  genes = genes,
+  assay_name = "logcounts",
+  scale_expr = TRUE,
+  scale_by = "gene",
+  point_size = 0.5,
+  colour_option = "magma",
+  ncol_genes = 1,
+  theme_name = "classic"
+)
+
+p_expr$plot
+```

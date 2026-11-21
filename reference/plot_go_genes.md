@@ -64,3 +64,76 @@ plot_go_genes(
 ## Value
 
 A list containing plotting data and plot.
+
+## Examples
+
+``` r
+data(norm_ccc_example)
+
+go_result <- calculate_go(
+  norm_list = norm_ccc_example,
+  cluster_col = "layer_guess",
+  methods = names(norm_ccc_example),
+  assay_name = "logcounts",
+  OrgDb = org.Mm.eg.db::org.Mm.eg.db,
+  key_type = "SYMBOL",
+  ont = "BP",
+  fdr_cutoff = 0.05,
+  min_prop = 0.4,
+  min_spots = 10,
+  min_genes = 5,
+  pvalue_cutoff = 0.05,
+  qvalue_cutoff = 0.05,
+  p_adjust_method = "BH",
+  readable = TRUE,
+  test_type = "t"
+)
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+#> 'select()' returned 1:1 mapping between keys and columns
+
+if (nrow(go_result$genes) > 0L) {
+  p_go_genes <- plot_go_genes(
+    go_result = go_result,
+    top_n = 5,
+    method_col = "method",
+    cluster_col = "cluster",
+    gene_col = "gene",
+    point_size = 3,
+    theme_name = "classic"
+  )
+
+  p_go_genes$plot
+}
+```

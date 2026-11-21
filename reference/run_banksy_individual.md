@@ -71,3 +71,34 @@ The function supports either:
 
 - a named list where each method contains a named list of
   SpatialExperiment objects corresponding to multiple slices.
+
+## Examples
+
+``` r
+data(norm_example)
+
+banksy_norm <- run_banksy_individual(
+  norm_list = norm_example,
+  methods = names(norm_example),
+  assay_name = "logcounts",
+  cluster_col = "banksy_cluster",
+  k_geom = 15,
+  lambda = 0.8,
+  resolution = 0.2,
+  seed = 123
+)
+#> Computing neighbors...
+#> Spatial mode is kNN_median
+#> Parameters: k_geom=15
+#> Done
+#> Done
+#> Using seed=123
+#> Using seed=123
+#> Computing neighbors...
+#> Spatial mode is kNN_median
+#> Parameters: k_geom=15
+#> Done
+#> Done
+#> Using seed=123
+#> Using seed=123
+```

@@ -37,3 +37,20 @@ calculate_annotation_agreement(
 ## Value
 
 A data frame containing pairwise annotation agreement.
+
+## Examples
+
+``` r
+data(norm_example)
+
+agreement <- calculate_annotation_agreement(
+  norm_list = norm_example,
+  annotation_col = "cell_type",
+  method_order = NULL,
+  remove_na = TRUE
+)
+
+agreement
+#>   method1 method2 agreement n_compared
+#> 1    None SpaNorm         1        944
+```

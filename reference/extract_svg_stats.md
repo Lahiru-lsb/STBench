@@ -38,4 +38,19 @@ extract_svg_stats(
 
 ## Value
 
-Data frame.
+Data frame. \#' @examples \# Create a small SpatialExperiment object
+counts \<- matrix( 1:12, nrow = 3, dimnames = list( c("GeneA", "GeneB",
+"GeneC"), paste0("Cell", seq_len(4)) ) )
+
+spe \<- SpatialExperiment::SpatialExperiment( assays = list(counts =
+counts) )
+
+SummarizedExperiment::rowData(spe)\$LR_stat \<- c( 2.5, 4.0, 1.2 )
+
+\# Compare SVG statistics across normalization methods svg_norm \<-
+list( None = spe, scran = spe )
+
+result \<- extract_svg_stats( svg_norm = svg_norm, genes = c("GeneA",
+"GeneB") )
+
+print(result)

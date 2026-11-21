@@ -74,3 +74,21 @@ plot_svg_gene_set_distribution(
 ## Value
 
 List containing data and plot.
+
+## Examples
+
+``` r
+data(svg_example)
+
+genes <- head(rownames(svg_example[[1]]), 10)
+
+p <- plot_svg_gene_set_distribution(
+  svg_norm = svg_example,
+  genes = genes,
+  stat = "LR_stat",
+  transform = "log",
+  plot_type = "boxplot"
+)
+
+p$plot
+```

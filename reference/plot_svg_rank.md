@@ -49,3 +49,18 @@ plot_svg_rank(
 ## Value
 
 List containing data and plot.
+
+## Examples
+
+``` r
+data(svg_example)
+
+marker_genes <- head(rownames(svg_example[[1]]), 5)
+
+p <- plot_svg_rank(
+  svg_norm = svg_example,
+  genes = marker_genes
+)
+
+p$plot
+```
