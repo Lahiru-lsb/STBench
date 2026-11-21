@@ -41,6 +41,7 @@ jobs:
             any::pkgdown
             local::.
             github::jinworks/CellChat
+            github::immunogenomics/presto
             bioc::Banksy
             cran::aricode
             cran::clevr
