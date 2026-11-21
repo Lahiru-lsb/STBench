@@ -57,7 +57,8 @@ Suggests:
     aricode,
     clevr,
     org.Mm.eg.db,
-    presto
+    presto,
+    sparseMatrixStats
 Remotes:
     jinworks/CellChat
 URL: https://lahiru-lsb.github.io/STBench/
