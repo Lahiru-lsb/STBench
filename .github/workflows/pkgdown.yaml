@@ -42,6 +42,9 @@ jobs:
             local::.
             github::jinworks/CellChat
             bioc::Banksy
+            cran::aricode
+            cran::clevr
+            bioc::org.Mm.eg.db
           dependencies: '"hard"'
           needs: website
 
