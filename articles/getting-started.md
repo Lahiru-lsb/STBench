@@ -13,7 +13,7 @@ data(spe_example)
 data(norm_example)
 
 dim(spe_example)
-#> NULL
+#> [1]  50 944
 names(norm_example)
 #> [1] "None"    "SpaNorm"
 ```
@@ -223,7 +223,7 @@ sessionInfo()
 #>  [41] scales_1.4.0                SummarizedExperiment_1.42.0
 #>  [43] cli_3.6.6                   rmarkdown_2.32             
 #>  [45] ragg_1.5.2                  generics_0.1.4             
-#>  [47] metapod_1.20.0              otel_0.3.0                 
+#>  [47] otel_0.3.0                  metapod_1.20.0             
 #>  [49] RSpectra_0.16-2             rjson_0.2.23               
 #>  [51] ggbeeswarm_0.7.3            scuttle_1.22.0             
 #>  [53] cachem_1.1.0                splines_4.6.2              
@@ -235,7 +235,7 @@ sessionInfo()
 #>  [65] BiocNeighbors_2.6.0         ggrepel_0.9.8              
 #>  [67] beeswarm_0.4.0              irlba_2.4.1                
 #>  [69] SpaNorm_1.6.0               scater_1.40.2              
-#>  [71] systemfonts_1.3.3           magick_2.9.1               
+#>  [71] systemfonts_1.3.4           magick_2.9.1               
 #>  [73] locfit_1.5-9.12             limma_3.68.5               
 #>  [75] jquerylib_0.1.4             glue_1.8.1                 
 #>  [77] pkgdown_2.2.1               codetools_0.2-20           

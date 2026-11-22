@@ -48,4 +48,5 @@ spe_qc <- add_qcs(
 )
 #> Loading required namespace: SpatialExperiment
 #> Warning: No mitochondrial genes matched '^MT-'.
+#' @import sparseMatrixStats
 ```

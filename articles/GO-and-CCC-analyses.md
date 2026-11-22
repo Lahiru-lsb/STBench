@@ -212,9 +212,9 @@ ccc_results <- run_ccc(
 #> The cell groups used for CellChat analysis are  Astrocytes, Cerebellum neurons, Cholinergic and monoaminergic neurons, Choroid plexus epithelial cells, Dentate gyrus granule neurons, Di- and mesencephalon excitatory neurons, Di- and mesencephalon inhibitory neurons, Ependymal cells, Glutamatergic neuroblasts, Hindbrain neurons/Spinal cord neurons, Microglia, Non-glutamatergic neuroblasts, Olfactory inhibitory neurons, Oligodendrocyte precursor cells, Oligodendrocytes, Peptidergic neurons, Pericytes, Perivascular macrophages, Telencephalon inhibitory interneurons, Telencephalon projecting excitatory neurons, Telencephalon projecting inhibitory neurons, Unannotated, Vascular and leptomeningeal cells, Vascular endothelial cells, Vascular smooth muscle cells 
 #> The number of highly variable ligand-receptor pairs used for signaling inference is 94 
 #> truncatedMean is used for calculating the average gene expression per cell group. 
-#> [1] ">>> Run CellChat on spatial transcriptomics data using distances as constraints of the computed communication probability <<< [2026-11-22 02:31:25.752669]"
+#> [1] ">>> Run CellChat on spatial transcriptomics data using distances as constraints of the computed communication probability <<< [2026-11-22 09:38:49.253767]"
 #> The input L-R pairs have both secreted signaling and contact-dependent signaling. Run CellChat in a contact-dependent manner for `Cell-Cell Contact` signaling, and in a diffusion manner based on the `interaction.range` for other L-R pairs. 
-#> [1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-11-22 02:31:27.891033]"
+#> [1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-11-22 09:38:50.814039]"
 #> The cell-cell communication related with the following cell groups are excluded due to the few number of cells:  Cerebellum neurons, Dentate gyrus granule neurons, Glutamatergic neuroblasts, Non-glutamatergic neuroblasts, Olfactory inhibitory neurons !     5.2% interactions are removed!
 #> [1] "Create a CellChat object from a data matrix"
 #> Create a CellChat object from spatial transcriptomics data... 
@@ -222,9 +222,9 @@ ccc_results <- run_ccc(
 #> The cell groups used for CellChat analysis are  Astrocytes, Cerebellum neurons, Cholinergic and monoaminergic neurons, Choroid plexus epithelial cells, Dentate gyrus granule neurons, Di- and mesencephalon excitatory neurons, Di- and mesencephalon inhibitory neurons, Ependymal cells, Glutamatergic neuroblasts, Hindbrain neurons/Spinal cord neurons, Microglia, Non-glutamatergic neuroblasts, Olfactory inhibitory neurons, Oligodendrocyte precursor cells, Oligodendrocytes, Peptidergic neurons, Pericytes, Perivascular macrophages, Telencephalon inhibitory interneurons, Telencephalon projecting excitatory neurons, Telencephalon projecting inhibitory neurons, Unannotated, Vascular and leptomeningeal cells, Vascular endothelial cells, Vascular smooth muscle cells 
 #> The number of highly variable ligand-receptor pairs used for signaling inference is 93 
 #> truncatedMean is used for calculating the average gene expression per cell group. 
-#> [1] ">>> Run CellChat on spatial transcriptomics data using distances as constraints of the computed communication probability <<< [2026-11-22 02:31:31.185067]"
+#> [1] ">>> Run CellChat on spatial transcriptomics data using distances as constraints of the computed communication probability <<< [2026-11-22 09:38:53.392984]"
 #> The input L-R pairs have both secreted signaling and contact-dependent signaling. Run CellChat in a contact-dependent manner for `Cell-Cell Contact` signaling, and in a diffusion manner based on the `interaction.range` for other L-R pairs. 
-#> [1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-11-22 02:31:33.223545]"
+#> [1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-11-22 09:38:54.894787]"
 #> The cell-cell communication related with the following cell groups are excluded due to the few number of cells:  Cerebellum neurons, Dentate gyrus granule neurons, Glutamatergic neuroblasts, Non-glutamatergic neuroblasts, Olfactory inhibitory neurons !     7.8% interactions are removed!
 ```
 
@@ -360,7 +360,7 @@ sessionInfo()
 #>  [15] network_1.20.0              scatterpie_0.2.6           
 #>  [17] labeling_0.4.3              sass_0.5.0                 
 #>  [19] S7_1.0.0                    pbapply_1.7-5              
-#>  [21] pkgdown_2.2.1               systemfonts_1.3.3          
+#>  [21] pkgdown_2.2.1               systemfonts_1.3.4          
 #>  [23] yulab.utils_0.2.6           gson_0.2.2                 
 #>  [25] svglite_2.2.2               DOSE_4.6.0                 
 #>  [27] parallelly_1.50.0           collapse_2.1.9             
@@ -378,7 +378,7 @@ sessionInfo()
 #>  [51] crayon_1.5.3                ggtangle_0.1.5             
 #>  [53] lattice_0.23-1              beachmat_2.28.0            
 #>  [55] cowplot_1.2.0               KEGGREST_1.52.2            
-#>  [57] magick_2.9.1                sna_2.8                    
+#>  [57] sna_2.8                     magick_2.9.1               
 #>  [59] pillar_1.11.1               knitr_1.52                 
 #>  [61] ComplexHeatmap_2.28.0       metapod_1.20.0             
 #>  [63] GenomicRanges_1.64.0        rjson_0.2.23               
@@ -409,42 +409,43 @@ sessionInfo()
 #> [113] digest_0.6.39               presto_1.1.0               
 #> [115] rmarkdown_2.32              XVector_0.52.0             
 #> [117] htmltools_0.5.9             pkgconfig_2.0.3            
-#> [119] MatrixGenerics_1.24.0       fastmap_1.2.0              
-#> [121] rlang_1.3.0                 GlobalOptions_0.1.4        
-#> [123] htmlwidgets_1.6.4           shiny_1.15.0               
-#> [125] farver_2.1.2                jquerylib_0.1.4            
-#> [127] jsonlite_2.0.0              BiocParallel_1.46.0        
-#> [129] statnet.common_4.13.0       GOSemSim_2.38.3            
-#> [131] BiocSingular_1.28.1         magrittr_2.0.5             
-#> [133] Formula_1.2-6               scuttle_1.22.0             
-#> [135] ggnetwork_0.5.14            ggplotify_0.1.4            
-#> [137] patchwork_1.3.2             Rcpp_1.1.2                 
-#> [139] ape_5.8-1                   ggnewscale_0.5.2           
-#> [141] gdtools_0.6.0               reticulate_1.47.0          
-#> [143] stringi_1.8.9               ggalluvial_0.12.6          
-#> [145] MASS_7.3-66                 plyr_1.8.9                 
-#> [147] parallel_4.6.2              listenv_1.1.0              
-#> [149] ggrepel_0.9.8               Biostrings_2.80.2          
-#> [151] splines_4.6.2               circlize_0.4.18            
-#> [153] locfit_1.5-9.12             ps_1.9.3                   
-#> [155] igraph_2.3.4                ggpubr_1.0.0               
-#> [157] ggsignif_0.6.4              enrichit_0.2.7             
-#> [159] rngtools_1.5.2              reshape2_1.4.5             
-#> [161] stats4_4.6.2                ScaledMatrix_1.20.0        
-#> [163] evaluate_1.0.5              scran_1.40.0               
-#> [165] BiocManager_1.30.27         foreach_1.5.2              
-#> [167] tweenr_2.0.3                httpuv_1.6.17              
-#> [169] tidyr_1.3.2                 purrr_1.2.2                
-#> [171] polyclip_1.10-7             clue_0.3-68                
-#> [173] ggplot2_4.0.4               gridBase_0.4-7             
-#> [175] ggforce_0.5.0               rsvd_2.0.0                 
-#> [177] broom_1.0.13                xtable_1.8-8               
-#> [179] RSpectra_0.16-2             tidytree_0.4.9             
-#> [181] rstatix_1.1.0               tidydr_0.0.7               
-#> [183] later_1.4.8                 viridisLite_0.4.3          
-#> [185] ragg_1.5.2                  tibble_3.3.1               
-#> [187] clusterProfiler_4.20.3      aplot_0.3.2                
-#> [189] memoise_2.0.1               AnnotationDbi_1.74.0       
-#> [191] registry_0.5-1              IRanges_2.46.0             
-#> [193] cluster_2.1.8.3             globals_0.20.0
+#> [119] sparseMatrixStats_1.24.0    MatrixGenerics_1.24.0      
+#> [121] fastmap_1.2.0               rlang_1.3.0                
+#> [123] GlobalOptions_0.1.4         htmlwidgets_1.6.4          
+#> [125] shiny_1.15.0                farver_2.1.2               
+#> [127] jquerylib_0.1.4             jsonlite_2.0.0             
+#> [129] BiocParallel_1.46.0         statnet.common_4.13.0      
+#> [131] GOSemSim_2.38.3             BiocSingular_1.28.1        
+#> [133] magrittr_2.0.5              Formula_1.2-6              
+#> [135] scuttle_1.22.0              ggnetwork_0.5.14           
+#> [137] ggplotify_0.1.4             patchwork_1.3.2            
+#> [139] Rcpp_1.1.2                  ape_5.8-1                  
+#> [141] ggnewscale_0.5.2            gdtools_0.6.0              
+#> [143] reticulate_1.47.0           stringi_1.8.9              
+#> [145] ggalluvial_0.12.6           MASS_7.3-66                
+#> [147] plyr_1.8.9                  parallel_4.6.2             
+#> [149] listenv_1.1.0               ggrepel_0.9.8              
+#> [151] Biostrings_2.80.2           splines_4.6.2              
+#> [153] circlize_0.4.18             locfit_1.5-9.12            
+#> [155] ps_1.9.3                    ggpubr_1.0.0               
+#> [157] igraph_2.3.4                ggsignif_0.6.4             
+#> [159] enrichit_0.2.7              rngtools_1.5.2             
+#> [161] reshape2_1.4.5              stats4_4.6.2               
+#> [163] ScaledMatrix_1.20.0         evaluate_1.0.5             
+#> [165] scran_1.40.0                BiocManager_1.30.27        
+#> [167] foreach_1.5.2               tweenr_2.0.3               
+#> [169] httpuv_1.6.17               tidyr_1.3.2                
+#> [171] purrr_1.2.2                 polyclip_1.10-7            
+#> [173] clue_0.3-68                 ggplot2_4.0.4              
+#> [175] gridBase_0.4-7              ggforce_0.5.0              
+#> [177] rsvd_2.0.0                  broom_1.0.13               
+#> [179] xtable_1.8-8                RSpectra_0.16-2            
+#> [181] tidytree_0.4.9              rstatix_1.1.0              
+#> [183] tidydr_0.0.7                later_1.4.8                
+#> [185] viridisLite_0.4.3           ragg_1.5.2                 
+#> [187] tibble_3.3.1                clusterProfiler_4.20.3     
+#> [189] aplot_0.3.2                 memoise_2.0.1              
+#> [191] AnnotationDbi_1.74.0        registry_0.5-1             
+#> [193] IRanges_2.46.0              cluster_2.1.8.3            
+#> [195] globals_0.20.0
 ```

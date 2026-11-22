@@ -313,7 +313,7 @@ sessionInfo()
 #> [55] Matrix_1.7-6                jsonlite_2.0.0             
 #> [57] clevr_0.1.2                 patchwork_1.3.2            
 #> [59] IRanges_2.46.0              S4Vectors_0.50.3           
-#> [61] irlba_2.4.1                 systemfonts_1.3.3          
+#> [61] irlba_2.4.1                 systemfonts_1.3.4          
 #> [63] magick_2.9.1                tidyr_1.3.2                
 #> [65] jquerylib_0.1.4             glue_1.8.1                 
 #> [67] pkgdown_2.2.1               uwot_0.2.5                 
@@ -321,11 +321,12 @@ sessionInfo()
 #> [71] GenomicRanges_1.64.0        tibble_3.3.1               
 #> [73] pillar_1.11.1               htmltools_0.5.9            
 #> [75] Seqinfo_1.2.0               R6_2.6.1                   
-#> [77] textshaping_1.1.0           evaluate_1.0.5             
-#> [79] sccore_1.0.7                lattice_0.23-1             
-#> [81] Biobase_2.72.0              SpatialExperiment_1.22.0   
-#> [83] bslib_0.12.0                Rcpp_1.1.2                 
-#> [85] gridExtra_2.3.1             SparseArray_1.12.3         
-#> [87] xfun_0.62                   fs_2.1.0                   
-#> [89] MatrixGenerics_1.24.0       pkgconfig_2.0.3
+#> [77] textshaping_1.1.0           sparseMatrixStats_1.24.0   
+#> [79] evaluate_1.0.5              sccore_1.0.7               
+#> [81] lattice_0.23-1              Biobase_2.72.0             
+#> [83] SpatialExperiment_1.22.0    bslib_0.12.0               
+#> [85] Rcpp_1.1.2                  gridExtra_2.3.1            
+#> [87] SparseArray_1.12.3          xfun_0.62                  
+#> [89] fs_2.1.0                    MatrixGenerics_1.24.0      
+#> [91] pkgconfig_2.0.3
 ```
