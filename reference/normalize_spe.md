@@ -78,9 +78,9 @@ norm <- normalize_spe(
 #> iter:  1, fitting NB model
 #> iter:  1, iter:  1, log-likelihood: -22181.157895
 #> iter:  1, iter:  2, log-likelihood: -19613.199517
-#> iter:  1, iter:  3, log-likelihood: -18219.054127
+#> iter:  1, iter:  3, log-likelihood: -18219.054126
 #> iter:  1, iter:  4, log-likelihood: -17530.854099
-#> iter:  1, iter:  5, log-likelihood: -17258.591876
+#> iter:  1, iter:  5, log-likelihood: -17258.591875
 #> iter:  1, iter:  6, log-likelihood: -17042.133075
 #> iter:  1, iter:  7, log-likelihood: -16974.387651
 #> iter:  1, iter:  8, log-likelihood: -16945.514715
@@ -93,31 +93,31 @@ norm <- normalize_spe(
 #> iter:  2, log-likelihood: -16708.424245
 #> iter:  2, fitting NB model
 #> iter:  2, iter:  1, log-likelihood: -16708.424245
-#> iter:  2, iter:  2, log-likelihood: -16678.838548
-#> iter:  2, iter:  2, log-likelihood: -16678.838548
-#> iter:  2, iter:  2, log-likelihood: -16678.838548
-#> iter:  2, iter:  3, log-likelihood: -16678.838548 (converged)
+#> iter:  2, iter:  2, log-likelihood: -16678.838547
+#> iter:  2, iter:  2, log-likelihood: -16678.838547
+#> iter:  2, iter:  2, log-likelihood: -16678.838547
+#> iter:  2, iter:  3, log-likelihood: -16678.838547 (converged)
 #> iter:  3, estimating gene-wise dispersion
-#> iter:  3, log-likelihood: -16670.914894
+#> iter:  3, log-likelihood: -16670.914893
 #> iter:  3, fitting NB model
-#> iter:  3, iter:  1, log-likelihood: -16670.914894
-#> iter:  3, iter:  1, log-likelihood: -16670.914894
-#> iter:  3, iter:  1, log-likelihood: -16670.914894
-#> iter:  3, iter:  2, log-likelihood: -16670.914894
-#> iter:  3, iter:  2, log-likelihood: -16670.914894
-#> iter:  3, iter:  2, log-likelihood: -16670.914894
-#> iter:  3, iter:  3, log-likelihood: -16670.914894 (converged)
+#> iter:  3, iter:  1, log-likelihood: -16670.914893
+#> iter:  3, iter:  1, log-likelihood: -16670.914893
+#> iter:  3, iter:  1, log-likelihood: -16670.914893
+#> iter:  3, iter:  2, log-likelihood: -16670.914893
+#> iter:  3, iter:  2, log-likelihood: -16670.914893
+#> iter:  3, iter:  2, log-likelihood: -16670.914893
+#> iter:  3, iter:  3, log-likelihood: -16670.914893 (converged)
 #> iter:  4, estimating gene-wise dispersion
-#> iter:  4, log-likelihood: -16670.914894
+#> iter:  4, log-likelihood: -16670.914893
 #> iter:  4, fitting NB model
-#> iter:  4, iter:  1, log-likelihood: -16670.914894
-#> iter:  4, iter:  1, log-likelihood: -16670.914894
-#> iter:  4, iter:  1, log-likelihood: -16670.914894
-#> iter:  4, iter:  2, log-likelihood: -16670.914894
-#> iter:  4, iter:  2, log-likelihood: -16670.914894
-#> iter:  4, iter:  2, log-likelihood: -16670.914894
-#> iter:  4, iter:  3, log-likelihood: -16670.914894 (converged)
-#> iter:  5, log-likelihood: -16670.914894 (converged)
+#> iter:  4, iter:  1, log-likelihood: -16670.914893
+#> iter:  4, iter:  1, log-likelihood: -16670.914893
+#> iter:  4, iter:  1, log-likelihood: -16670.914893
+#> iter:  4, iter:  2, log-likelihood: -16670.914893
+#> iter:  4, iter:  2, log-likelihood: -16670.914893
+#> iter:  4, iter:  2, log-likelihood: -16670.914893
+#> iter:  4, iter:  3, log-likelihood: -16670.914893 (converged)
+#> iter:  5, log-likelihood: -16670.914893 (converged)
 #> (2/2) Normalising data
-#> norm_spanorm completed in 0.037 mins
+#> norm_spanorm completed in 0.063 mins
 ```
