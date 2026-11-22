@@ -90,15 +90,15 @@ banksy_norm <- run_banksy_individual(
 
 metrics_df <- calculate_clustering_metrics(
   norm_list = banksy_norm,
-  ground_truth_col = "cell_type",
+  ground_truth_col = "layer_guess",
   cluster_col = "banksy_cluster"
 )
 
 metrics_df
-#>    method  slice   n        ARI       NMI        HOM       COM          ASW
-#> 1    None slice1 944 0.02443865 0.1037530 0.05894022 0.4328602  0.004987321
-#> 2 SpaNorm slice1 944 0.02614274 0.1077854 0.06109576 0.4571149 -0.002514273
+#>    method  slice   n        ARI       NMI       HOM       COM          ASW
+#> 1    None slice1 944 0.08916554 0.2532399 0.1489408 0.8449019  0.004987321
+#> 2 SpaNorm slice1 944 0.08558020 0.2423588 0.1421474 0.8215048 -0.002514273
 #>     Overall n_asw ASW_sampled
-#> 1 0.1985178   944       FALSE
-#> 2 0.2086654   944       FALSE
+#> 1 0.4156942   944       FALSE
+#> 2 0.4020037   944       FALSE
 ```

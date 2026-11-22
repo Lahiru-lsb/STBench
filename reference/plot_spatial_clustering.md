@@ -116,7 +116,7 @@ banksy_norm <- run_banksy_individual(
 p <- plot_spatial_clustering(
   norm_list = banksy_norm,
   cluster_col = "banksy_cluster",
-  ground_truth_col = "cell_type",
+  ground_truth_col = "layer_guess",
   show = "both",
   point_size = 0.5,
   ncol = 2,

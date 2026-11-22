@@ -72,7 +72,7 @@ banksy_norm <- run_banksy_individual(
 
 metrics_df <- calculate_clustering_metrics(
   norm_list = banksy_norm,
-  ground_truth_col = "cell_type"
+  ground_truth_col = "layer_guess"
 )
 
 ranking_df <- rank_normalization_methods(

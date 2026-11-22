@@ -19,7 +19,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">STBench</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
 <li><a class="dropdown-item" href="../articles/getting-started.html">Getting started with STBench</a></li>
     <li><a class="dropdown-item" href="../articles/svg-analysis.html">Spatially variable gene analysis with STBench</a></li>
     <li><a class="dropdown-item" href="../articles/annotation-and-clustering.html">Cell-type annotation and spatial clustering with STBench</a></li>
-    <li><a class="dropdown-item" href="../articles/biological-interpretation.html">Biological interpretation and cell-cell communication with STBench</a></li>
+    <li><a class="dropdown-item" href="../articles/GO-and-CCC-analyses.html">GO-and-CCC-analyses</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -202,7 +202,7 @@ small example dataset.</p>
 <code class="sourceCode R"><span><span class="va">p_banksy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_spatial_clustering.html">plot_spatial_clustering</a></span><span class="op">(</span></span>
 <span>  norm_list <span class="op">=</span> <span class="va">banksy_norm</span>,</span>
 <span>  cluster_col <span class="op">=</span> <span class="st">"banksy_cluster"</span>,</span>
-<span>  ground_truth_col <span class="op">=</span> <span class="st">"cell_type"</span>,</span>
+<span>  ground_truth_col <span class="op">=</span> <span class="st">"layer_guess"</span>,</span>
 <span>  show <span class="op">=</span> <span class="st">"both"</span>,</span>
 <span>  methods <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">banksy_norm</span><span class="op">)</span>,</span>
 <span>  point_size <span class="op">=</span> <span class="fl">0.5</span>,</span>
@@ -214,17 +214,17 @@ small example dataset.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">metrics_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calculate_clustering_metrics.html">calculate_clustering_metrics</a></span><span class="op">(</span></span>
 <span>  norm_list <span class="op">=</span> <span class="va">banksy_norm</span>,</span>
-<span>  ground_truth_col <span class="op">=</span> <span class="st">"cell_type"</span>,</span>
+<span>  ground_truth_col <span class="op">=</span> <span class="st">"layer_guess"</span>,</span>
 <span>  cluster_col <span class="op">=</span> <span class="st">"banksy_cluster"</span>,</span>
 <span>  methods <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">banksy_norm</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span><span class="va">metrics_df</span></span>
-<span><span class="co">#&gt;    method  slice   n        ARI       NMI        HOM       COM          ASW</span></span>
-<span><span class="co">#&gt; 1    None slice1 944 0.02443865 0.1037530 0.05894022 0.4328602  0.004987321</span></span>
-<span><span class="co">#&gt; 2 SpaNorm slice1 944 0.02614274 0.1077854 0.06109576 0.4571149 -0.002514273</span></span>
+<span><span class="co">#&gt;    method  slice   n        ARI       NMI       HOM       COM          ASW</span></span>
+<span><span class="co">#&gt; 1    None slice1 944 0.08916554 0.2532399 0.1489408 0.8449019  0.004987321</span></span>
+<span><span class="co">#&gt; 2 SpaNorm slice1 944 0.08558020 0.2423588 0.1421474 0.8215048 -0.002514273</span></span>
 <span><span class="co">#&gt;     Overall n_asw ASW_sampled</span></span>
-<span><span class="co">#&gt; 1 0.1985178   944       FALSE</span></span>
-<span><span class="co">#&gt; 2 0.2086654   944       FALSE</span></span>
+<span><span class="co">#&gt; 1 0.4156942   944       FALSE</span></span>
+<span><span class="co">#&gt; 2 0.4020037   944       FALSE</span></span>
 <span></span>
 <span><span class="va">p_metrics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_clustering_metrics.html">plot_clustering_metrics</a></span><span class="op">(</span></span>
 <span>  metrics_df <span class="op">=</span> <span class="va">metrics_df</span>,</span>
@@ -239,8 +239,8 @@ small example dataset.</p>
 <code class="sourceCode R"><span><span class="va">ranking_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rank_normalization_methods.html">rank_normalization_methods</a></span><span class="op">(</span>metrics_df <span class="op">=</span> <span class="va">metrics_df</span><span class="op">)</span></span>
 <span><span class="va">ranking_df</span></span>
 <span><span class="co">#&gt;   Rank  method   Overall</span></span>
-<span><span class="co">#&gt; 1    1 SpaNorm 0.2086654</span></span>
-<span><span class="co">#&gt; 2    2    None 0.1985178</span></span>
+<span><span class="co">#&gt; 1    1    None 0.4156942</span></span>
+<span><span class="co">#&gt; 2    2 SpaNorm 0.4020037</span></span>
 <span></span>
 <span><span class="va">p_ranking</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_normalization_ranking.html">plot_normalization_ranking</a></span><span class="op">(</span></span>
 <span>  ranking_df <span class="op">=</span> <span class="va">ranking_df</span>,</span>
@@ -273,7 +273,7 @@ strategy uses up to the available number of genes.</p>
 <span></span>
 <span><span class="va">metrics_genes</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calculate_gene_selection_metrics.html">calculate_gene_selection_metrics</a></span><span class="op">(</span></span>
 <span>  banksy_list <span class="op">=</span> <span class="va">banksy_genes</span>,</span>
-<span>  ground_truth_col <span class="op">=</span> <span class="st">"cell_type"</span></span>
+<span>  ground_truth_col <span class="op">=</span> <span class="st">"layer_guess"</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">p_genes</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_gene_selection_metrics.html">plot_gene_selection_metrics</a></span><span class="op">(</span></span>
@@ -312,7 +312,7 @@ strategy uses up to the available number of genes.</p>
 <span><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; other attached packages:</span></span>
-<span><span class="co">#&gt; [1] STBench_0.1.0</span></span>
+<span><span class="co">#&gt; [1] STBench_0.99.0</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
 <span><span class="co">#&gt;  [1] tidyselect_1.2.1            viridisLite_0.4.3          </span></span>

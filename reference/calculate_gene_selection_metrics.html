@@ -9,7 +9,7 @@ clustering agreement for each gene-selection strategy."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">STBench</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@ clustering agreement for each gene-selection strategy."></head><body>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/getting-started.html">Getting started with STBench</a></li>
     <li><a class="dropdown-item" href="../articles/svg-analysis.html">Spatially variable gene analysis with STBench</a></li>
     <li><a class="dropdown-item" href="../articles/annotation-and-clustering.html">Cell-type annotation and spatial clustering with STBench</a></li>
-    <li><a class="dropdown-item" href="../articles/biological-interpretation.html">Biological interpretation and cell-cell communication with STBench</a></li>
+    <li><a class="dropdown-item" href="../articles/GO-and-CCC-analyses.html">GO-and-CCC-analyses</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -99,7 +99,7 @@ data(norm_example)</p>
 )</p>
 <p>metrics_genes &lt;- calculate_gene_selection_metrics(
   banksy_list = banksy_genes,
-  ground_truth_col = "cell_type"
+  ground_truth_col = "layer_guess"
 )</p>
     </div>
 
@@ -136,19 +136,19 @@ data(norm_example)</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">metrics_genes</span> <span class="op">&lt;-</span> <span class="fu">calculate_gene_selection_metrics</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  banksy_list <span class="op">=</span> <span class="va">banksy_list</span>,</span></span>
-<span class="r-in"><span>  ground_truth_col <span class="op">=</span> <span class="st">"cell_type"</span>,</span></span>
+<span class="r-in"><span>  ground_truth_col <span class="op">=</span> <span class="st">"layer_guess"</span>,</span></span>
 <span class="r-in"><span>  cluster_col <span class="op">=</span> <span class="st">"banksy_cluster"</span>,</span></span>
 <span class="r-in"><span>  asw_max_cells <span class="op">=</span> <span class="fl">3000</span>,</span></span>
 <span class="r-in"><span>  seed <span class="op">=</span> <span class="fl">123</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">metrics_genes</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    method  slice   n        ARI       NMI        HOM       COM          ASW</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    None slice1 944 0.02443865 0.1037530 0.05894022 0.4328602  0.004987321</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 SpaNorm slice1 944 0.02614274 0.1077854 0.06109576 0.4571149 -0.002514273</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    method  slice   n        ARI       NMI       HOM       COM          ASW</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    None slice1 944 0.08916554 0.2532399 0.1489408 0.8449019  0.004987321</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 SpaNorm slice1 944 0.08558020 0.2423588 0.1421474 0.8215048 -0.002514273</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     Overall n_asw ASW_sampled gene_selection</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.1985178   944       FALSE            all</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.2086654   944       FALSE            all</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.4156942   944       FALSE            all</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.4020037   944       FALSE            all</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

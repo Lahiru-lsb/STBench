@@ -117,7 +117,7 @@ banksy_genes <- run_banksy_gene_selection(
 
 metrics_genes <- calculate_gene_selection_metrics(
   banksy_list = banksy_genes,
-  ground_truth_col = "cell_type"
+  ground_truth_col = "layer_guess"
 )
 
 p_genes <- plot_gene_selection_metrics(

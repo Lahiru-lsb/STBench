@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">STBench</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/getting-started.html">Getting started with STBench</a></li>
     <li><a class="dropdown-item" href="../articles/svg-analysis.html">Spatially variable gene analysis with STBench</a></li>
     <li><a class="dropdown-item" href="../articles/annotation-and-clustering.html">Cell-type annotation and spatial clustering with STBench</a></li>
-    <li><a class="dropdown-item" href="../articles/biological-interpretation.html">Biological interpretation and cell-cell communication with STBench</a></li>
+    <li><a class="dropdown-item" href="../articles/GO-and-CCC-analyses.html">GO-and-CCC-analyses</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -81,35 +81,49 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Data frame.
-#' @examples
-# Create a small SpatialExperiment object
-counts &lt;- matrix(
-  1:12,
-  nrow = 3,
-  dimnames = list(
-    c("GeneA", "GeneB", "GeneC"),
-    paste0("Cell", seq_len(4))
-  )
-)</p>
-<p>spe &lt;- SpatialExperiment::SpatialExperiment(
-  assays = list(counts = counts)
-)</p>
-<p>SummarizedExperiment::rowData(spe)$LR_stat &lt;- c(
-  2.5, 4.0, 1.2
-)</p>
-<p># Compare SVG statistics across normalization methods
-svg_norm &lt;- list(
-  None = spe,
-  scran = spe
-)</p>
-<p>result &lt;- extract_svg_stats(
-  svg_norm = svg_norm,
-  genes = c("GeneA", "GeneB")
-)</p>
-<p>print(result)</p>
+    <p>Data frame.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Create a small SpatialExperiment object</span></span></span>
+<span class="r-in"><span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="fl">1</span><span class="op">:</span><span class="fl">12</span>,</span></span>
+<span class="r-in"><span>  nrow <span class="op">=</span> <span class="fl">3</span>,</span></span>
+<span class="r-in"><span>  dimnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"GeneA"</span>, <span class="st">"GeneB"</span>, <span class="st">"GeneC"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"Cell"</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fl">4</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">spe</span> <span class="op">&lt;-</span> <span class="fu">SpatialExperiment</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/SpatialExperiment/man/SpatialExperiment.html" class="external-link">SpatialExperiment</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  assays <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>counts <span class="op">=</span> <span class="va">counts</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">SummarizedExperiment</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">rowData</a></span><span class="op">(</span><span class="va">spe</span><span class="op">)</span><span class="op">$</span><span class="va">LR_stat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="fl">2.5</span>, <span class="fl">4.0</span>, <span class="fl">1.2</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Compare SVG statistics across normalization methods</span></span></span>
+<span class="r-in"><span><span class="va">svg_norm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  None <span class="op">=</span> <span class="va">spe</span>,</span></span>
+<span class="r-in"><span>  scran <span class="op">=</span> <span class="va">spe</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu">extract_svg_stats</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  svg_norm <span class="op">=</span> <span class="va">svg_norm</span>,</span></span>
+<span class="r-in"><span>  genes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"GeneA"</span>, <span class="st">"GeneB"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    gene svg_stat method</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 GeneA      2.5   None</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 GeneB      4.0   None</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 GeneA      2.5  scran</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 GeneB      4.0  scran</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

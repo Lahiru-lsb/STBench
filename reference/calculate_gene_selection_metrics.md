@@ -47,7 +47,7 @@ methods = names(norm_example), gene_selection = "all", assay_name =
 "logcounts", k_geom = 15, lambda = 0.8, resolution = 0.2, seed = 123 )
 
 metrics_genes \<- calculate_gene_selection_metrics( banksy_list =
-banksy_genes, ground_truth_col = "cell_type" )
+banksy_genes, ground_truth_col = "layer_guess" )
 
 ## Examples
 
@@ -83,17 +83,17 @@ banksy_list <- list(all = banksy_results)
 
 metrics_genes <- calculate_gene_selection_metrics(
   banksy_list = banksy_list,
-  ground_truth_col = "cell_type",
+  ground_truth_col = "layer_guess",
   cluster_col = "banksy_cluster",
   asw_max_cells = 3000,
   seed = 123
 )
 
 head(metrics_genes)
-#>    method  slice   n        ARI       NMI        HOM       COM          ASW
-#> 1    None slice1 944 0.02443865 0.1037530 0.05894022 0.4328602  0.004987321
-#> 2 SpaNorm slice1 944 0.02614274 0.1077854 0.06109576 0.4571149 -0.002514273
+#>    method  slice   n        ARI       NMI       HOM       COM          ASW
+#> 1    None slice1 944 0.08916554 0.2532399 0.1489408 0.8449019  0.004987321
+#> 2 SpaNorm slice1 944 0.08558020 0.2423588 0.1421474 0.8215048 -0.002514273
 #>     Overall n_asw ASW_sampled gene_selection
-#> 1 0.1985178   944       FALSE            all
-#> 2 0.2086654   944       FALSE            all
+#> 1 0.4156942   944       FALSE            all
+#> 2 0.4020037   944       FALSE            all
 ```
