@@ -197,7 +197,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] STBench_0.99.2
+#> [1] STBench_0.99.3
 #> 
 #> loaded via a namespace (and not attached):
 #>   [1] tidyselect_1.2.1            viridisLite_0.4.3          
