@@ -56,11 +56,11 @@ svg_df <- extract_svg_gene_set(
 )
 
 head(svg_df)
-#>      gene   svg_stat  method
-#> 1   HSPB7  0.4511002    None
-#> 2   KCNC3 47.1932871    None
-#> 3 COL25A1 10.2645509    None
-#> 4     MAL 92.0936790    None
-#> 5   CPXM2 -0.3092557    None
-#> 6   HSPB7  0.4578449 SpaNorm
+#>    gene   svg_stat  method
+#> 1 Ptgds  57.347071    None
+#> 2   MBP 457.322353    None
+#> 3  PLTP  18.833916    None
+#> 4   Vtn   8.300816    None
+#> 5  Penk 150.665360    None
+#> 6 Ptgds  80.428930 SpaNorm
 ```

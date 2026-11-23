@@ -13,7 +13,7 @@ data(spe_example)
 data(norm_example)
 
 dim(spe_example)
-#> [1]  50 944
+#> [1]   50 1000
 names(norm_example)
 #> [1] "None"    "SpaNorm"
 ```
@@ -113,10 +113,10 @@ norm_recomputed <- normalize_spe(
 norm <- norm_example
 lapply(norm, dim)
 #> $None
-#> [1]  50 944
+#> [1]   50 1000
 #> 
 #> $SpaNorm
-#> [1]  50 944
+#> [1]   50 1000
 ```
 
 ## Compare normalised library sizes
@@ -197,7 +197,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] STBench_0.99.7
+#> [1] STBench_0.99.8
 #> 
 #> loaded via a namespace (and not attached):
 #>   [1] tidyselect_1.2.1            viridisLite_0.4.3          

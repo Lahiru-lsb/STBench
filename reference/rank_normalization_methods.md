@@ -54,6 +54,6 @@ ranking_df <- rank_normalization_methods(
 
 ranking_df
 #>   Rank  method   Overall
-#> 1    1    None 0.4156942
-#> 2    2 SpaNorm 0.4020037
+#> 1    1    None 0.5305656
+#> 2    2 SpaNorm 0.4530171
 ```

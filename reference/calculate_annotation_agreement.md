@@ -52,5 +52,5 @@ agreement <- calculate_annotation_agreement(
 
 agreement
 #>   method1 method2 agreement n_compared
-#> 1    None SpaNorm         1        944
+#> 1    None SpaNorm         1       1000
 ```

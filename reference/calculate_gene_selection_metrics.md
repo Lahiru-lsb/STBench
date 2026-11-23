@@ -90,10 +90,10 @@ metrics_genes <- calculate_gene_selection_metrics(
 )
 
 head(metrics_genes)
-#>    method  slice   n        ARI       NMI       HOM       COM          ASW
-#> 1    None slice1 944 0.08916554 0.2532399 0.1489408 0.8449019  0.004987321
-#> 2 SpaNorm slice1 944 0.08558020 0.2423588 0.1421474 0.8215048 -0.002514273
+#>    method  slice    n       ARI       NMI       HOM       COM          ASW
+#> 1    None slice1 1000 0.3453591 0.4775199 0.3465493 0.7676278  0.075250048
+#> 2 SpaNorm slice1 1000 0.2700809 0.4334076 0.3461446 0.5794992 -0.002975939
 #>     Overall n_asw ASW_sampled gene_selection
-#> 1 0.4156942   944       FALSE            all
-#> 2 0.4020037   944       FALSE            all
+#> 1 0.5305656  1000       FALSE            all
+#> 2 0.4530171  1000       FALSE            all
 ```

@@ -95,39 +95,37 @@ annotated_norm <- run_annotation(
 table(annotated_norm$None$SingleR_label)
 #> 
 #>                                  Astrocytes 
-#>                                          61 
+#>                                         105 
 #>             Choroid plexus epithelial cells 
-#>                                          58 
+#>                                          19 
 #>               Dentate gyrus granule neurons 
-#>                                          47 
+#>                                          23 
 #>    Di- and mesencephalon excitatory neurons 
-#>                                          82 
+#>                                          58 
 #>    Di- and mesencephalon inhibitory neurons 
-#>                                          14 
+#>                                          46 
 #>                             Ependymal cells 
-#>                                          17 
-#>                                   Microglia 
-#>                                          32 
-#>               Non-glutamatergic neuroblasts 
-#>                                          24 
-#>                            Oligodendrocytes 
-#>                                         121 
-#>                         Peptidergic neurons 
-#>                                          74 
-#>                                   Pericytes 
 #>                                          16 
+#>                                   Microglia 
+#>                                          19 
+#>               Non-glutamatergic neuroblasts 
+#>                                          42 
+#>                            Oligodendrocytes 
+#>                                         137 
+#>                         Peptidergic neurons 
+#>                                          35 
+#>                                   Pericytes 
+#>                                          20 
 #>       Telencephalon inhibitory interneurons 
-#>                                          31 
+#>                                          24 
 #> Telencephalon projecting excitatory neurons 
-#>                                          59 
+#>                                         206 
 #> Telencephalon projecting inhibitory neurons 
-#>                                          48 
-#>                                 Unannotated 
-#>                                          56 
+#>                                          54 
 #>           Vascular and leptomeningeal cells 
-#>                                          48 
+#>                                          36 
 #>                  Vascular endothelial cells 
-#>                                          43 
+#>                                          42 
 #>                Vascular smooth muscle cells 
-#>                                          13 
+#>                                          18 
 ```

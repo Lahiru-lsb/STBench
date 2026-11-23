@@ -43,7 +43,7 @@ dataset.
 common_genes <- Reduce(intersect, lapply(svg_norm, rownames))
 marker_genes <- head(common_genes, 5)
 marker_genes
-#> [1] "HSPB7"   "KCNC3"   "COL25A1" "MAL"     "CPXM2"
+#> [1] "Ptgds" "MBP"   "PLTP"  "Vtn"   "Penk"
 ```
 
 ### Compare SVG statistics
@@ -281,7 +281,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] STBench_0.99.7
+#> [1] STBench_0.99.8
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] SummarizedExperiment_1.42.0 gtable_0.3.6               

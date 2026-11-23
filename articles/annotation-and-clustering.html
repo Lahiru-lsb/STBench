@@ -19,7 +19,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">STBench</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.7</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.8</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,7 +145,7 @@ known ground truth.</p>
 <span><span class="op">)</span></span>
 <span><span class="va">annotation_agreement</span></span>
 <span><span class="co">#&gt;   method1 method2 agreement n_compared</span></span>
-<span><span class="co">#&gt; 1    None SpaNorm         1        944</span></span>
+<span><span class="co">#&gt; 1    None SpaNorm         1       1000</span></span>
 <span></span>
 <span><span class="va">p_agreement</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_annotation_agreement.html">plot_annotation_agreement</a></span><span class="op">(</span></span>
 <span>  norm_list <span class="op">=</span> <span class="va">annotated_norm</span>,</span>
@@ -219,12 +219,12 @@ small example dataset.</p>
 <span>  methods <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">banksy_norm</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span><span class="va">metrics_df</span></span>
-<span><span class="co">#&gt;    method  slice   n        ARI       NMI       HOM       COM          ASW</span></span>
-<span><span class="co">#&gt; 1    None slice1 944 0.08916554 0.2532399 0.1489408 0.8449019  0.004987321</span></span>
-<span><span class="co">#&gt; 2 SpaNorm slice1 944 0.08558020 0.2423588 0.1421474 0.8215048 -0.002514273</span></span>
+<span><span class="co">#&gt;    method  slice    n       ARI       NMI       HOM       COM          ASW</span></span>
+<span><span class="co">#&gt; 1    None slice1 1000 0.3453591 0.4775199 0.3465493 0.7676278  0.075250048</span></span>
+<span><span class="co">#&gt; 2 SpaNorm slice1 1000 0.2700809 0.4334076 0.3461446 0.5794992 -0.002975939</span></span>
 <span><span class="co">#&gt;     Overall n_asw ASW_sampled</span></span>
-<span><span class="co">#&gt; 1 0.4156942   944       FALSE</span></span>
-<span><span class="co">#&gt; 2 0.4020037   944       FALSE</span></span>
+<span><span class="co">#&gt; 1 0.5305656  1000       FALSE</span></span>
+<span><span class="co">#&gt; 2 0.4530171  1000       FALSE</span></span>
 <span></span>
 <span><span class="va">p_metrics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_clustering_metrics.html">plot_clustering_metrics</a></span><span class="op">(</span></span>
 <span>  metrics_df <span class="op">=</span> <span class="va">metrics_df</span>,</span>
@@ -239,8 +239,8 @@ small example dataset.</p>
 <code class="sourceCode R"><span><span class="va">ranking_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rank_normalization_methods.html">rank_normalization_methods</a></span><span class="op">(</span>metrics_df <span class="op">=</span> <span class="va">metrics_df</span><span class="op">)</span></span>
 <span><span class="va">ranking_df</span></span>
 <span><span class="co">#&gt;   Rank  method   Overall</span></span>
-<span><span class="co">#&gt; 1    1    None 0.4156942</span></span>
-<span><span class="co">#&gt; 2    2 SpaNorm 0.4020037</span></span>
+<span><span class="co">#&gt; 1    1    None 0.5305656</span></span>
+<span><span class="co">#&gt; 2    2 SpaNorm 0.4530171</span></span>
 <span></span>
 <span><span class="va">p_ranking</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_normalization_ranking.html">plot_normalization_ranking</a></span><span class="op">(</span></span>
 <span>  ranking_df <span class="op">=</span> <span class="va">ranking_df</span>,</span>
@@ -312,7 +312,7 @@ strategy uses up to the available number of genes.</p>
 <span><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; other attached packages:</span></span>
-<span><span class="co">#&gt; [1] STBench_0.99.7</span></span>
+<span><span class="co">#&gt; [1] STBench_0.99.8</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
 <span><span class="co">#&gt;  [1] tidyselect_1.2.1            viridisLite_0.4.3          </span></span>

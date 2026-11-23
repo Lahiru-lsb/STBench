@@ -92,7 +92,7 @@ annotation_agreement <- calculate_annotation_agreement(
 )
 annotation_agreement
 #>   method1 method2 agreement n_compared
-#> 1    None SpaNorm         1        944
+#> 1    None SpaNorm         1       1000
 
 p_agreement <- plot_annotation_agreement(
   norm_list = annotated_norm,
@@ -179,12 +179,12 @@ metrics_df <- calculate_clustering_metrics(
   methods = names(banksy_norm)
 )
 metrics_df
-#>    method  slice   n        ARI       NMI       HOM       COM          ASW
-#> 1    None slice1 944 0.08916554 0.2532399 0.1489408 0.8449019  0.004987321
-#> 2 SpaNorm slice1 944 0.08558020 0.2423588 0.1421474 0.8215048 -0.002514273
+#>    method  slice    n       ARI       NMI       HOM       COM          ASW
+#> 1    None slice1 1000 0.3453591 0.4775199 0.3465493 0.7676278  0.075250048
+#> 2 SpaNorm slice1 1000 0.2700809 0.4334076 0.3461446 0.5794992 -0.002975939
 #>     Overall n_asw ASW_sampled
-#> 1 0.4156942   944       FALSE
-#> 2 0.4020037   944       FALSE
+#> 1 0.5305656  1000       FALSE
+#> 2 0.4530171  1000       FALSE
 
 p_metrics <- plot_clustering_metrics(
   metrics_df = metrics_df,
@@ -203,8 +203,8 @@ p_metrics$plot
 ranking_df <- rank_normalization_methods(metrics_df = metrics_df)
 ranking_df
 #>   Rank  method   Overall
-#> 1    1    None 0.4156942
-#> 2    2 SpaNorm 0.4020037
+#> 1    1    None 0.5305656
+#> 2    2 SpaNorm 0.4530171
 
 p_ranking <- plot_normalization_ranking(
   ranking_df = ranking_df,
@@ -280,7 +280,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] STBench_0.99.7
+#> [1] STBench_0.99.8
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] tidyselect_1.2.1            viridisLite_0.4.3          
