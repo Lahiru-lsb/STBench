@@ -11,13 +11,13 @@ Source:
 [`DESCRIPTION`](https://github.com/Lahiru-lsb/STBench/blob/main/DESCRIPTION)
 
 Boyagoda L (2026). *STBench: Normalisation and Benchmarking for Spatial
-Transcriptomics*. R package version 0.99.5,
+Transcriptomics*. R package version 0.99.6,
 <https://lahiru-lsb.github.io/STBench/>.
 
     @Manual{,
       title = {STBench: Normalisation and Benchmarking for Spatial Transcriptomics},
       author = {Lahiru Boyagoda},
       year = {2026},
-      note = {R package version 0.99.5},
+      note = {R package version 0.99.6},
       url = {https://lahiru-lsb.github.io/STBench/},
     }
